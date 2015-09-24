@@ -1,0 +1,3 @@
+Assignment Two
+
+This assignment will compair the computational time of Factoring and Primality Testing

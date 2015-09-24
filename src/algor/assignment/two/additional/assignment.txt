@@ -1,0 +1,23 @@
+Assignment 2
+
+0. Select at least two different, relatively simple and straight forward arithmetic problems.
+
+Factoring, calculating fibonacci series, primality testing, alternate representations for numbers, exponentiation, operations on arbitrary precision integers,  ... are possible examples - these or similar problems would be fine.
+
+If you have any doubts about whether are a problem is appropriate -- ask via the mailing list and I'll let  you know.
+
+
+1. state your problem very clearly -- exactly what is to be input and what results are to be output. Also, given an instance of your problem(s), what is the size of that problem?
+
+2. implement two (or more) different algorithms for each problem (you are welcome to keep these simple, if that is what you are most comfortable with; you are also welcome to tackle more challenging algorithmic solutions to the problems you've chosen).
+
+3. present arguments for the correctness of your algorithms/implementations -- they don't necessarily need to be terribly formal, but they should be clear, and convincing.
+
+4. What are the operations in the algorithms/implementations?
+5. How often do those operations occur?
+6. What is an appropriate cost model for the algorithm?
+7. What is the expected performance (using ~notation)
+
+7. run some tests, exploring both correctness and performance of the algorithms/implementations you have chosen
+
+You can use the template to report the individual characteristics of your algorithms. You should also submit a separate document for each problem, where you compare/contrast the behavior (correctness and performance) of the different versions of your algorithm for that problem. 

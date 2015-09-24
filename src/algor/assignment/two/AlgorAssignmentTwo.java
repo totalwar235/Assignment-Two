@@ -5,6 +5,8 @@
  */
 package algor.assignment.two;
 
+import static javafx.beans.binding.Bindings.convert;
+
 /**
  *
  * @author totalwar
@@ -16,6 +18,10 @@ public class AlgorAssignmentTwo {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Primality k = new Primality(15485863);
+        long temp = k.User_Alg_Check();
+        
+        System.out.println("time: "+String.valueOf(temp) + " :: Prime: " + String.valueOf(k.prime));
     }
     
 }

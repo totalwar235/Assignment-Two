@@ -10,5 +10,8 @@ package algor.assignment.two;
  * @author totalwar
  */
 public class Factoring {
+
+    public Factoring() {
+    }
     
 }

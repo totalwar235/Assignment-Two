@@ -1,3 +1,85 @@
 Assignment Two
 
 This assignment will compair the computational time of Factoring and Primality Testing
+
+For the primality testing I wrote a function myself which has a Big O of "N", for the other primality algorithm it also has a Big O of "N". The Reason both of these are for a single for loop.
+
+HomeBrewed :
+        if ((User % 2) == 0) {
+            hbprime = false;
+            return duration;
+        }
+        for (int x = 3; x < User; x += 2) {
+            temp = User % x;
+            if (temp == 0) {
+                hbprime = false;
+
+                return duration;
+            }
+        }
+
+Documented : 
+        if (User == 2 || User == 1 || User == 0) {
+            prime = true;
+            return duration;
+        }
+        if (User % 2 == 0) {
+            prime = false;
+            return duration;
+        }
+        for (int i = 3; i <= Math.sqrt(User) + 1; i = i + 2) {
+            if (User % i == 0) {
+                prime = false;
+                return duration;
+            }
+        }
+
+These Algorithms are tested with know prime numbers and 100 random numbers and timed to show the difference in optimality. The results for one of my tests are here:
+    Number: 1
+            HomeBrewed ~ time: 0 
+            Documented ~ time: 0
+
+    Number: 13
+            HomeBrewed ~ time: 0 
+            Documented ~ time: 0
+
+    Number: 15485863
+            HomeBrewed ~ time: 68 
+            Documented ~ time: 0
+
+    Number: 32452843
+            HomeBrewed ~ time: 143 
+            Documented ~ time: 0
+
+    Number: 49979687
+            HomeBrewed ~ time: 220 
+            Documented ~ time: 1
+
+    Number: 67867967
+            HomeBrewed ~ time: 301 
+            Documented ~ time: 0
+
+    Number: 104395301
+            HomeBrewed ~ time: 460 
+            Documented ~ time: 1
+
+    Number: 256203161
+            HomeBrewed ~ time: 1122 
+            Documented ~ time: 0
+
+    Number: 512927357
+            HomeBrewed ~ time: 2244 
+            Documented ~ time: 1
+
+    Number: 756065159
+            HomeBrewed ~ time: 3319 
+            Documented ~ time: 1
+
+    Number: 982451653
+            HomeBrewed ~ time: 4337 
+            Documented ~ time: 0
+
+    100 random numbers
+    Homebrewed avg time: 85
+    Documented avg time: 0
+

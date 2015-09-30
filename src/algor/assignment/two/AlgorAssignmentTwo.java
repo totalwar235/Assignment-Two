@@ -18,6 +18,8 @@ public class AlgorAssignmentTwo {
      */
     public static void main(String[] args) {
         primeTesting();
+
+        factoringTesting();
     }
 
     public static void primeTesting() {
@@ -81,6 +83,76 @@ public class AlgorAssignmentTwo {
         System.out.println("Number: " + String.valueOf(k.User) + "\n\tHomeBrewed ~ time: " + String.valueOf(k.User_Alg_Check()) + " \n\tDocumented ~ time: " + String.valueOf(k.isPrime2()) + "\n");
 
         System.out.println("100 random numbers\nHomebrewed avg time: " + String.valueOf(avgHB / 100) + "\nDocumented avg time: " + String.valueOf(avgDoc / 100) + "\n");
+
+    }
+
+    private static void factoringTesting() {
+        Factoring k = new Factoring(1);
+        k.primeFactors();
+        k.primeFactorsTwo();
+        System.out.println("Number: " + String.valueOf(k.base) + "\n\tAlgorithm One ~ time: " + String.valueOf(k.timeFactoringOne) + " \n\tAlgorithm Two ~ time: " + String.valueOf(k.timeFactoringTwo) + "\n");
+
+        k = new Factoring(20);
+        k.primeFactors();
+        k.primeFactorsTwo();
+        System.out.println("Number: " + String.valueOf(k.base) + "\n\tAlgorithm One ~ time: " + String.valueOf(k.timeFactoringOne) + " \n\tAlgorithm Two ~ time: " + String.valueOf(k.timeFactoringTwo) + "\n");
+
+        k = new Factoring(150);
+        k.primeFactors();
+        k.primeFactorsTwo();
+        System.out.println("Number: " + String.valueOf(k.base) + "\n\tAlgorithm One ~ time: " + String.valueOf(k.timeFactoringOne) + " \n\tAlgorithm Two ~ time: " + String.valueOf(k.timeFactoringTwo) + "\n");
+
+        k = new Factoring(2500);
+        k.primeFactors();
+        k.primeFactorsTwo();
+        System.out.println("Number: " + String.valueOf(k.base) + "\n\tAlgorithm One ~ time: " + String.valueOf(k.timeFactoringOne) + " \n\tAlgorithm Two ~ time: " + String.valueOf(k.timeFactoringTwo) + "\n");
+
+        k = new Factoring(50000);
+        k.primeFactors();
+        k.primeFactorsTwo();
+        System.out.println("Number: " + String.valueOf(k.base) + "\n\tAlgorithm One ~ time: " + String.valueOf(k.timeFactoringOne) + " \n\tAlgorithm Two ~ time: " + String.valueOf(k.timeFactoringTwo) + "\n");
+
+        k = new Factoring(100003);
+        k.primeFactors();
+        k.primeFactorsTwo();
+        System.out.println("Number: " + String.valueOf(k.base) + "\n\tAlgorithm One ~ time: " + String.valueOf(k.timeFactoringOne) + " \n\tAlgorithm Two ~ time: " + String.valueOf(k.timeFactoringTwo) + "\n");
+
+        k = new Factoring(3000005);
+        k.primeFactors();
+        k.primeFactorsTwo();
+        System.out.println("Number: " + String.valueOf(k.base) + "\n\tAlgorithm One ~ time: " + String.valueOf(k.timeFactoringOne) + " \n\tAlgorithm Two ~ time: " + String.valueOf(k.timeFactoringTwo) + "\n");
+
+        k = new Factoring(800000007);
+        k.primeFactors();
+        k.primeFactorsTwo();
+        System.out.println("Number: " + String.valueOf(k.base) + "\n\tAlgorithm One ~ time: " + String.valueOf(k.timeFactoringOne) + " \n\tAlgorithm Two ~ time: " + String.valueOf(k.timeFactoringTwo) + "\n");
+
+        k = new Factoring(250000013);
+        k.primeFactors();
+        k.primeFactorsTwo();
+        System.out.println("Number: " + String.valueOf(k.base) + "\n\tAlgorithm One ~ time: " + String.valueOf(k.timeFactoringOne) + " \n\tAlgorithm Two ~ time: " + String.valueOf(k.timeFactoringTwo) + "\n");
+
+        long avgOne = 0;
+        long avgTwo = 0;
+        for (int i = 100; i > 0; i--) {
+
+            Random rand = new Random();
+
+            int randomNum = rand.nextInt();
+
+            k = new Factoring(randomNum);
+            k.primeFactors();
+            avgOne += k.timeFactoringOne;
+            //System.out.println(String.valueOf(i)+": " +String.valueOf(randomNum));
+            //System.out.println("HomeBrew ~ time: " + String.valueOf(temp) + " :: Prime: " + String.valueOf(k.hbprime));
+
+            k.primeFactors();
+            avgTwo += k.timeFactoringTwo;
+
+            //System.out.println("Documented ~ time: " + String.valueOf(temp) + " :: Prime: " + String.valueOf(k.prime) +"\n");
+        }
+        
+        System.out.println("100 random numbers\n\tAlgorithm One ~ avg time: " + String.valueOf(avgOne/100) + " \n\tAlgorithm Two ~ avg time: " + String.valueOf(avgTwo/100) + "\n");
 
     }
 

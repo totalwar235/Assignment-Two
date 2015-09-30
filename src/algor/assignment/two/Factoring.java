@@ -15,7 +15,8 @@ import java.util.List;
 public class Factoring {
 
     long base;
-    long timePrimeHB;
+    long timeFactoringOne;
+    long timeFactoringTwo;
 
     public Factoring(long b) {
         base = b;
@@ -43,7 +44,27 @@ public class Factoring {
 
         long endTime = System.currentTimeMillis();
 
-        timePrimeHB = (endTime - startTime);
+        timeFactoringOne = (endTime - startTime);
+        return factors;
+    }
+
+    public List<Integer> primeFactorsTwo() {
+        long startTime = System.currentTimeMillis();
+        int n = (int) base;
+        List<Integer> factors = new ArrayList<>();
+        for (int i = 2; i <= n / i; i++) {
+            while (n % i == 0) {
+                factors.add(i);
+                n /= i;
+            }
+        }
+        if (n > 1) {
+            factors.add(n);
+        }
+        long endTime = System.currentTimeMillis();
+
+        timeFactoringTwo = (endTime - startTime);
+
         return factors;
     }
 }
